@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pricing list</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<!--- created by DevIdeas --->
+
+
+<div class="main">
+	
+	 <!--- box1 --->
+
+	<div class="box one">
+		  <label id="price"><span><i class="fa fa-inr" aria-hidden="true"></i></span>199</label>
+		  <div class="top">
+			  <p id="title"><i class="fa fa-frown-o" aria-hidden="true"></i>basic</p>
+		  </div>
+		  <div class="mid">
+		  	  <P>loreum ipsum</P>
+              <p><i class="fa fa-check" aria-hidden="true"></i>It is a long established fact</p>
+              <p><i class="fa fa-check" aria-hidden="true"></i>It is a long established fact</p>
+              <p><i class="fa fa-times" aria-hidden="true"></i>It is a long established fact</p>
+              <p><i class="fa fa-times" aria-hidden="true"></i>It is a long established fact</p>
+		  </div>
+          <button onclick="order1()">checkout now<i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+	</div>
+
+  <!--- box2 --->
+
+	<div class="box two">
+		<label id="price"><span><i class="fa fa-inr" aria-hidden="true"></i></span>599</label>
+		  <div class="top">
+			 <p><i class="fa fa-meh-o" aria-hidden="true"></i>standard</p>
+		  </div>
+		  <div class="mid">
+              <P>loreum ipsum</P>
+              <p><i class="fa fa-check" aria-hidden="true"></i>It is a long established fact</p>
+              <p><i class="fa fa-check" aria-hidden="true"></i>It is a long established fact</p>
+              <p><i class="fa fa-times" aria-hidden="true"></i>It is a long established fact</p>
+              <p><i class="fa fa-check" aria-hidden="true"></i>It is a long established fact</p>
+		  </div>
+          <button onclick="order2()">checkout now<i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+	</div>
+
+  <!--- box3 --->
+
+	<div class="box three">
+		<label id="price"><span><i class="fa fa-inr" aria-hidden="true"></i></span>399</label>
+		  <div class="top">
+		    <p><i class="fa fa-smile-o" aria-hidden="true"></i>premium</p>
+		   </div>
+		   <div class="mid">
+		   	  <P>loreum ipsum</P>
+              <p><i class="fa fa-check" aria-hidden="true"></i>It is a long established fact</p>
+              <p><i class="fa fa-check" aria-hidden="true"></i>It is a long established fact</p>
+              <p><i class="fa fa-check" aria-hidden="true"></i>It is a long established fact</p>
+              <p><i class="fa fa-check" aria-hidden="true"></i>It is a long established fact</p>
+		   </div>
+           <button onclick="order3()">checkout now<i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+	</div>
+
+</div>
+
+
+ <!--- script --->
+
+<script type="text/javascript">
+
+    //add class active
+
+	function order1(){
+		var top = document.querySelector('.one .top');       
+        top.classList.toggle('active');
+	}
+	function order2(){
+		var top = document.querySelector('.two .top');       
+        top.classList.toggle('active');
+
+	}
+	function order3(){
+		var top = document.querySelector('.three .top');       
+        top.classList.toggle('active');
+	}
+
+</script>
+
+
+</body>
+</html>
+
+<!--- created by DevIdeas --->

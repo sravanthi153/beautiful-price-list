@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+body{
+	background: #D7DBDD;
+	height: 100vh;
+}
+.main{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* box part */
+.box{
+	position: relative;
+	height: 420px;
+    width: 300px;
+   text-align: center;
+   border-radius: 15px;
+   background: #F8F9F9;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    box-shadow: 0.1px 4px 20px 2px rgba(0,0,0,0.1);
+}
+
+/* middle box */
+.box:nth-child(2){
+	margin: 0 100px;
+}
+
+/* top part */
+.top{
+	position: absolute;
+	top: -50px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 320px;
+	height: 220px;
+	border-radius: 15px;
+	clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 50% 100%, 0% 85%, 0% 100%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	 transition: 0.5s;
+}
+.top i{
+	font-size: 25px;
+	margin-right: 5px;
+}
+.top p{
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 25px;
+}
+.one .top{
+  background-image: linear-gradient(to left,#3498DB, #A569BD);
+}
+.two .top{
+  background-image: linear-gradient(to left,#E91E63, #A569BD);
+}
+.three .top{
+  background-image: linear-gradient(to left,#F44336, #E91E63);
+}
+
+/* All buttons */
+button{
+	position: absolute;
+	bottom: -25px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 200px;
+	height: 50px;
+	border-radius: 20px;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: capitalize;
+	outline: none;
+	letter-spacing: 1.1px;
+	z-index: 25;
+	transition: 0.4s;
+	box-shadow: 0.1px 4px 15px 2px rgba(0,0,0,0.1);
+}
+button .fa-shopping-cart{
+	font-size: 18px;
+	margin-left: 10px;
+}
+.one button{
+  background-image: linear-gradient(to left,#3498DB, #A569BD);
+}
+.two button{
+   background-image: linear-gradient(to left,#E91E63, #A569BD);
+}
+.three button{
+   background-image: linear-gradient(to left,#F44336, #E91E63);
+}
+
+/* price part */
+#price{
+	position: absolute;
+	top: -100px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	z-index: 25;
+	text-align: center;
+	line-height: 100px;
+	font-weight: bold;
+	font-size: 28px;
+	background: #F8F9F9;
+}
+.one #price{
+	color: #3498DB;
+}
+.two #price{
+	color: #E91E63;
+}
+.three #price{
+	color: #F44336;
+}
+#price i{
+	margin-right: 5px;
+	font-size: 20px;
+}
+
+/* mid part */
+.mid{
+	height: 200px;
+	width: 80%;
+	margin-top: 125px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.mid p{
+	padding: 7px 0;
+	opacity: 0.8;
+}
+.mid p:first-child{
+	font-weight: bold;
+	font-size: 25px;
+	margin-bottom: 15px;
+	letter-spacing: 1px;
+}
+.mid i{
+	margin-right: 12px;
+	color: #AED581;
+}
+.fa-times:before{
+	color: #FF7043;
+}
+
+/* after add class (active) by javascript */
+.active{
+  z-index: 20;
+  height: 470px;
+  clip-path: none;
+}
+.active~button{
+	color: transparent;
+	bottom: 20px;
+	box-shadow: 0.1px 4px 15px 2px rgba(0,0,0,0.2);
+	animation: anime 2s infinite;
+}
+.active~button::after{
+	content: "complete";
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #fff;
+	opacity: 0.8;
+}
+.active~button::before{
+	content: "\f00c";
+	font-family: "FontAwesome";
+	font-size: 15px;
+	position: absolute;
+	right: 20%;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #ddd;
+	opacity: 0.7;
+}
+
+
+/* animation waves in buttons*/
+
+@keyframes anime{
+0% {
+		box-shadow: 0 0 0 0 rgba(255, 255, 240 ,0.6);
+	}
+	
+	70% {
+		box-shadow: 0 0 0 10px rgba(240, 240,200 , 0.1);
+	}
+	
+	100% {
+		box-shadow: none;
+	}
+}
+
+
+/* To make responsive */
+
+@media(max-width: 1000px){
+	body{
+		height: 100%;
+	}
+	.main{
+		padding: 150px 0;
+		flex-direction: column;
+	}
+	.box{
+        position: relative;
+        height: 420px;
+        width: 300px;
+       text-align: center;
+       border-radius: 15px;
+       background: #F8F9F9;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+        box-shadow: 0.1px 4px 20px 2px rgba(0,0,0,0.1);
+	}
+	.box:nth-child(2){
+	    margin: 200px 0;
+     }
+}
+
+
+
+/* created by DevIdeas */
